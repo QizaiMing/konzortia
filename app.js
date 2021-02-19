@@ -19,4 +19,4 @@ mongoose.connect(process.env.DATABASE_URL, {
   useUnifiedTopology: true
 })
 
-app.listen(3000)
+app.listen(process.env.PORT)
