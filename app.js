@@ -14,12 +14,9 @@ app.use(bodyParser.json())
 
 app.use('/api/movie', moviesRoute)
 
-mongoose.connect(
-  process.env.DATABASE_URL,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  (err) => {
-    console.log(err)
-  }
-)
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
 
 app.listen(3000)
